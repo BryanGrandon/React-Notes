@@ -7,6 +7,7 @@ React is an open source JavaScript library for creating user interfaces.
 - [Introduction](#introduction)
 - [Web application packager](#web-application-packager)
 - [JavaScript XML](#javascript-xml--jsx)
+- [Components](#components)
 
 ## _Introduction_
 
@@ -46,3 +47,23 @@ React uses JSX to declare what to render. JSX is a JavaScript extension that all
 5. img always closes => `<img />`.
 6. class => className.
 7. for => htmlFor.
+
+## _Components_
+
+A component is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state. <br>
+In react components are create using functions or classes.
+
+### Props
+
+Props are the properties of a component. They are data that are passed from one component to another. <br>
+Add properties (props) as attributes.
+
+### [Functional component](/code/components/functional-component.jsx)
+
+- Must return a react element.
+- Must begin with a capital letter ( PascalCase ).
+
+### [Class component](/code/components/class-component.jsx)
+
+- Must extend React.Components.
+- Must have a render() method to return a JSX element.
