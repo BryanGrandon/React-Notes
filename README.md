@@ -67,3 +67,30 @@ Add properties (props) as attributes.
 
 - Must extend React.Components.
 - Must have a render() method to return a JSX element.
+
+## _Rendering_
+
+The virtual DOM (V DOM) It is a lightweight in-memory representation of the DOM (Document Object Model),
+and it is used to optimize the rendering of components in a React application.
+
+### Component life cycle
+
+React components have a lifecycle consisting of three phases: Mounting, Updating, and Unmounting along with several
+“lifecycle methods” that you can override to run code at particular times in the process.
+
+### [List and keys](/code/rendering/list-and-keys.jsx)
+
+When you render lists in React, you can use the key prop to specify a unique key for each item.
+This key is used to identify which item to update when you want to update a specific item.
+
+### [Render props](/code/rendering/render-props.jsx)
+
+The term 'render props' refers to a technique for sharing code between React components using a prop whose value is a function. A component with a render prop takes a function that returns a React element and calls it instead of implementing its own its own render logic.
+
+### [Conditional Rendering](/code/rendering/conditional-rendering.jsx)
+
+Use JavaScript operators like 'if' or the 'conditional operator' to create elements representing the current state,
+and let React update the UI to match them.
+
+- If else.
+- Ternary operator.
