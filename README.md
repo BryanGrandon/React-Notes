@@ -8,6 +8,7 @@ React is an open source JavaScript library for creating user interfaces.
 - [Web application packager](#web-application-packager)
 - [JavaScript XML](#javascript-xml--jsx)
 - [Components](#components)
+- [Hooks](#hooks)
 
 ## _Introduction_
 
@@ -94,3 +95,19 @@ and let React update the UI to match them.
 
 - If else.
 - Ternary operator.
+
+## _Hooks_
+
+Hooks are a React API that allows us to have state, and other React features, in components created with a function
+
+- useState.
+- useEffect.
+- useContext.
+
+### [useState](/code/hooks/usestate.jsx)
+
+useState hook is used to manage the state of a component in functional components. Calling useState returns an array with tho elements: the current state value and a function to update the state.
+
+### [useEffect](/code/hooks/useeffect.jsx)
+
+useEffect is a special hook that lets you run side effects in React. It is similar to componentDidMount and componentDidUpdate, but it only runs when the component (or some of its props) changes and during the initial mount.
