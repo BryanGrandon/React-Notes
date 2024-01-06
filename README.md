@@ -2,6 +2,8 @@
 
 React is an open source JavaScript library for creating user interfaces.
 
+- [Projects](/projects/projects.md)
+
 ## _Table of content_
 
 - [Introduction](#introduction)
