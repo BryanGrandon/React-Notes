@@ -74,23 +74,13 @@ React components use props to communicate with each other. Props might remind yo
 
 ```JSX
 function Avatar(props) {
-  let isLegalAge = props.age >= 18;
-  return (
-    <p>
-      his name is {props.name} and he is {isLegalAge ? "of legal age" : "a minor"}
-    </p>
-  );
+  let text = `Name:${props.name}, Age:${props.age}`;
 }
 ```
 
 ```JSX
-function Avatar({ name, age }) {
-  let isLegalAge = age >= 18;
-  return (
-    <p>
-      his name is {name} and he is {isLegalAge ? "of legal age" : "a minor"}
-    </p>
-  );
+function Avatar({name, age}) {
+  let text = `Name:${name}, Age:${age}`;
 }
 ```
 
