@@ -8,6 +8,7 @@ React is an open source JavaScript library for creating user interfaces.
 - [Web application packager](#web-application-packager)
 - [JavaScript XML](#javascript-xml--jsx)
 - [Components](#components)
+- [Styling](#styling)
 - [Rendering](#rendering)
 - [Hooks](#hooks)
 
@@ -79,6 +80,33 @@ React components use props to communicate with each other. Props might remind yo
 - [Destructuring](/code/components/props/destructuring.jsx)
 - [PropTypes](/code/components/props/prop-types.jsx)
 - [DefaultProps](/code/components/props/default-props.jsx)
+
+## _[Styling](/https://react.dev/learn/tutorial-tic-tac-toe#stylescss)_
+
+Choosing the right method for styling components isn’t an absolute truth. It’s a relative choice that should serve your use case, it depends on your personal preferences and the specific complexity of your application.
+
+### [Inline CSS](/code/styling/inline-css.jsx)
+
+React lets you add CSS inline, written as attributes and passed to elements.
+
+```JSX
+<p style={{color:"#1f1235"}}>Text</p>
+
+const styleText = { color: "red" }
+<p style={styleText}>Text</p>
+```
+
+### [CSS modules](/code/styling/module-css.jsx)
+
+CSS files in which all class names and animation names are scoped locally by default.
+
+CSS classes are only available within the component where they are used.
+
+```JSX
+import "./styles/element.css";
+
+<p className="text">Text</p>
+```
 
 ## _Rendering_
 
