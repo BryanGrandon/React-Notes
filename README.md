@@ -8,6 +8,7 @@ React is an open source JavaScript library for creating user interfaces.
 - [Web application packager](#web-application-packager)
 - [JavaScript XML](#javascript-xml--jsx)
 - [Components](#components)
+- [Rendering](#rendering)
 - [Hooks](#hooks)
 
 ## _Introduction_
@@ -68,48 +69,16 @@ const Component = (props) => {
 
 A component is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state.
 
+- [Functional Component](/code/components/fuctional.jsx)
+- [Class Component](/code/components/class.jsx)
+
 ### [Props](/https://react.dev/learn/passing-props-to-a-component)
 
 React components use props to communicate with each other. Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.
 
-```JSX
-function Avatar(props) {
-  let text = `Name:${props.name}, Age:${props.age}`;
-}
-```
-
-```JSX
-function Avatar({name, age}) {
-  let text = `Name:${name}, Age:${age}`;
-}
-```
-
-### Functional component
-
-```JSX
-{/* PascalCase */}
-function Greeting(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-root.render(
-  <>
-    {/* Must return a react element */}
-    <Greeting name="Bryan" />
-  </>
-);
-```
-
-### Class component
-
-```JSX
-{/* Must extend React.Components. */}
-class Greetings extends React.Component {
-  {/* Must have a render() method to return a JSX element. */}
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
-}
-```
+- [Destructuring](/code/components/props/destructuring.jsx)
+- [PropTypes](/code/components/props/prop-types.jsx)
+- [DefaultProps](/code/components/props/default-props.jsx)
 
 ## _Rendering_
 
