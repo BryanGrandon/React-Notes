@@ -2,8 +2,6 @@
 
 React is an open source JavaScript library for creating user interfaces.
 
-- [Projects](/projects/projects.md)
-
 ## _Table of content_
 
 - [Introduction](#introduction)
@@ -37,39 +35,91 @@ npm install
 npm run dev
 ```
 
-## _JavaScript XML ( JSX )_
+## _[JavaScript XML ( JSX )](https://react.dev/learn/writing-markup-with-jsx)_
 
 React uses JSX to declare what to render. JSX is a JavaScript extension that allows you to write code that is visually closer to HTML, which improves the readability of the code and makes it easier to understand.
 
-### [JSX Rules](/code/jsx.jsx)
+```JSX
+{/* All tags must be closed */}
 
-1. All tags must be closed.
-2. Components must return only one parent element.
-3. Rely on Fragment when i need to return 2 elements.
-4. Fragment => `<>` children `</>` OR `<React.Fragment>`.
-5. img always closes => `<img />`.
-6. class => className.
-7. for => htmlFor.
+const Component = (props) => {
+{/* Components must return only one parent element */}
+  return (
+    {/* Recourse to Fragment when I need to return 2 elements
+    <React.Fragment></React.Fragment> is the same as <></> */}
+    <>
+      <h2>Component</h2>
 
-## _Components_
+      {/* To assign a CSS class, use className */}
+      <section className="">
+        {/* We can use { } to insert JavaScript expressions in our JSX code. */}
+        <p>{props.text}</p>
+      </section>
 
-A component is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state. <br>
-In react components are create using functions or classes.
+      {/* The for attribute is written htmlFor */}
+      <label htmlFor="user">User</label>
+      <input type="text" name="" id="user" />
+    </>
+  );
+};
+```
 
-### Props
+## _[Components](https://react.dev/reference/react/components)_
 
-Props are the properties of a component. They are data that are passed from one component to another. <br>
-Add properties (props) as attributes.
+A component is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state.
 
-### [Functional component](/code/components/functional-component.jsx)
+### [Props](/https://react.dev/learn/passing-props-to-a-component)
 
-- Must return a react element.
-- Must begin with a capital letter ( PascalCase ).
+React components use props to communicate with each other. Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.
 
-### [Class component](/code/components/class-component.jsx)
+```JSX
+function Avatar(props) {
+  let isLegalAge = props.age >= 18;
+  return (
+    <p>
+      his name is {props.name} and he is {isLegalAge ? "of legal age" : "a minor"}
+    </p>
+  );
+}
+```
 
-- Must extend React.Components.
-- Must have a render() method to return a JSX element.
+```JSX
+function Avatar({ name, age }) {
+  let isLegalAge = age >= 18;
+  return (
+    <p>
+      his name is {name} and he is {isLegalAge ? "of legal age" : "a minor"}
+    </p>
+  );
+}
+```
+
+### Functional component
+
+```JSX
+{/* PascalCase */}
+function Greeting(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+root.render(
+  <>
+    {/* Must return a react element */}
+    <Greeting name="Bryan" />
+  </>
+);
+```
+
+### Class component
+
+```JSX
+{/* Must extend React.Components. */}
+class Greetings extends React.Component {
+  {/* Must have a render() method to return a JSX element. */}
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+```
 
 ## _Rendering_
 
