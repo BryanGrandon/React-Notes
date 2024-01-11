@@ -1,0 +1,11 @@
+.box {
+  background: #202020;
+  color: #fff;
+  padding: 1rem;
+}
+.done {
+  color: green;
+}
+.pending {
+  color: red;
+}
