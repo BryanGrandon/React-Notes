@@ -9,6 +9,7 @@ React is an open source JavaScript library for creating user interfaces.
 - [JavaScript XML](#javascript-xml--jsx)
 - [Components](#components)
 - [Styling](#styling)
+- [Event Handlers](#event-handlers)
 - [Rendering](#rendering)
 - [Hooks](#hooks)
 
@@ -106,6 +107,18 @@ CSS classes are only available within the component where they are used.
 import "./styles/element.css";
 
 <p className="text">Text</p>
+```
+
+## _Event Handlers_
+
+React lets you add event handlers to your JSX. Event handlers are your own functions that will be triggered in response to interactions like clicking, hovering, focusing form inputs, and so on.
+
+```JSX
+const handlerClick = (event) => {}
+const handlerChange = (event) => {}
+
+<button onclick={handlerClick}>Text</button>
+<input type="text" onChange={handlerChange} />
 ```
 
 ## _Rendering_
