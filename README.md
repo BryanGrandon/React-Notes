@@ -9,9 +9,9 @@ React is an open source JavaScript library for creating user interfaces.
 - [JavaScript XML](#javascript-xml--jsx)
 - [Components](#components)
 - [Rendering](#rendering)
+- [Hooks](#hooks)
 - [Styling](#styling)
 - [Event Handlers](#event-handlers)
-- [Hooks](#hooks)
 
 ## _Introduction_
 
@@ -105,6 +105,28 @@ and let React update the UI to match them.
 - &&
 - Ternary operator
 
+## _[Hooks](/code/hooks.jsx)_
+
+Hooks are a React API that allows us to have state, and other React features, in components created with a function
+
+### [useState](https://react.dev/reference/react/useState)
+
+useState hook is used to manage the state of a component in functional components. Calling useState returns an array with tho elements: the current state value and a function to update the state.
+
+```JSX
+import { useState } from "react";
+const [state, setState] = useState(initialState);
+```
+
+### [useEffect](https://react.dev/reference/react/useEffect)
+
+useEffect is a special hook that allows you to execute side effects in React. UseEffect is executed after the first render and after each update.
+
+```JSX
+import { useEffect } from "react";
+useEffect(setup, dependencies?)
+```
+
 ## _[Styling](/https://react.dev/learn/tutorial-tic-tac-toe#stylescss)_
 
 Choosing the right method for styling components isn’t an absolute truth. It’s a relative choice that should serve your use case, it depends on your personal preferences and the specific complexity of your application.
@@ -143,19 +165,3 @@ const handlerChange = (event) => {}
 <button onclick={handlerClick}>Text</button>
 <input type="text" onChange={handlerChange} />
 ```
-
-## _Hooks_
-
-Hooks are a React API that allows us to have state, and other React features, in components created with a function
-
-- useState.
-- useEffect.
-- useContext.
-
-### [useState](/code/hooks/usestate.jsx)
-
-useState hook is used to manage the state of a component in functional components. Calling useState returns an array with tho elements: the current state value and a function to update the state.
-
-### [useEffect](/code/hooks/useeffect.jsx)
-
-useEffect is a special hook that lets you run side effects in React. It is similar to componentDidMount and componentDidUpdate, but it only runs when the component (or some of its props) changes and during the initial mount.
