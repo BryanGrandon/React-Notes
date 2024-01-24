@@ -165,3 +165,33 @@ const handlerChange = (event) => {}
 <button onclick={handlerClick}>Text</button>
 <input type="text" onChange={handlerChange} />
 ```
+
+## _Deploy in GitHub pages_
+
+The first thing we do is type in console.
+
+```bash
+npm run build
+```
+
+This command is the one thar generates our project to production. The files created are static, so you can use any static file deployment service such as [GitHub Pages](https://pages.github.com/).
+
+We use an npm package which is [gh-pages](https://www.npmjs.com/package/gh-pages)
+
+```bash
+npm install gh-pages --save-dev
+```
+
+The script is created in the package.json to deploy.
+
+```json
+"scripts": {
+  "deploy": "gh-pages -d dist"
+}
+```
+
+We add the settings for the deployment of a static site provided by [vite](https://vitejs.dev/guide/static-deploy#github-pages).
+
+```bash
+npm run deploy
+```
