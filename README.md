@@ -21,12 +21,7 @@ This project is to have a record of what i have learned about React.
 
 CLI tools for React development
 
-- [Vite](https://vitejs.dev/)
-- [Create-React-App](https://create-react-app.dev/)
-
-### Vite
-
-Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
+**[Vite](https://vitejs.dev/)** is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 ```bash
 npm create vite@latest
@@ -37,6 +32,8 @@ cd name-project
 npm install
 npm run dev
 ```
+
+The old alternative is to occupy the **[Create-React-App](https://create-react-app.dev/)**
 
 ## _[JavaScript XML ( JSX )](https://react.dev/learn/writing-markup-with-jsx)_
 
@@ -74,9 +71,7 @@ A component is a piece of code that renders a part of the interface. Components 
 - [Functional Component](/code/components/fuctional.jsx)
 - [Class Component](/code/components/class.jsx)
 
-### [Props](/https://react.dev/learn/passing-props-to-a-component)
-
-React components use props to communicate with each other. Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.
+React components use **[Props](/https://react.dev/learn/passing-props-to-a-component)** to communicate with each other. They can be assigned any JavaScript value.
 
 - [Destructuring](/code/components/props/destructuring.jsx)
 - [PropTypes](/code/components/props/prop-types.jsx)
@@ -87,7 +82,7 @@ React components use props to communicate with each other. Props might remind yo
 The virtual DOM (V DOM) It is a lightweight in-memory representation of the DOM (Document Object Model),
 and it is used to optimize the rendering of components in a React application.
 
-### [List and keys](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
+**[List and keys](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)**
 
 When you render lists in React, you can use the key prop to specify a unique key for each item.
 This key is used to identify which item to update when you want to update a specific item.
@@ -96,7 +91,7 @@ This key is used to identify which item to update when you want to update a spec
 <section key={person.id}>...</section>;
 ```
 
-### [Conditional Rendering](https://react.dev/learn/conditional-rendering)
+**[Conditional Rendering](https://react.dev/learn/conditional-rendering)**
 
 Use JavaScript operators like 'if' or the 'conditional operator' to create elements representing the current state,
 and let React update the UI to match them.
@@ -109,18 +104,14 @@ and let React update the UI to match them.
 
 Hooks are a React API that allows us to have state, and other React features, in components created with a function
 
-### [useState](https://react.dev/reference/react/useState)
-
-useState hook is used to manage the state of a component in functional components. Calling useState returns an array with tho elements: the current state value and a function to update the state.
+**[useState](https://react.dev/reference/react/useState)** hook is used to manage the state of a component in functional components. Calling useState returns an array with tho elements: the current state value and a function to update the state.
 
 ```JSX
 import { useState } from "react";
 const [state, setState] = useState(initialState);
 ```
 
-### [useEffect](https://react.dev/reference/react/useEffect)
-
-useEffect is a special hook that allows you to execute side effects in React. UseEffect is executed after the first render and after each update.
+**[useEffect](https://react.dev/reference/react/useEffect)** is a special hook that allows you to execute side effects in React. UseEffect is executed after the first render and after each update.
 
 ```JSX
 import { useEffect } from "react";
@@ -131,9 +122,7 @@ useEffect(setup, dependencies?)
 
 Choosing the right method for styling components isn’t an absolute truth. It’s a relative choice that should serve your use case, it depends on your personal preferences and the specific complexity of your application.
 
-### [Inline CSS](/code/styling/inline-css.jsx)
-
-React lets you add CSS inline, written as attributes and passed to elements.
+React lets you add **[CSS inline](/code/styling/inline-css.jsx)**, written as attributes and passed to elements.
 
 ```JSX
 <p style={{color:"#1f1235"}}>Text</p>
@@ -142,11 +131,7 @@ const styleText = { color: "red" }
 <p style={styleText}>Text</p>
 ```
 
-### [CSS modules](/code/styling/module-css.jsx)
-
-CSS files in which all class names and animation names are scoped locally by default.
-
-CSS classes are only available within the component where they are used.
+React allows you to add **[CSS modules](/code/styling/module-css.jsx)** to be available within the component in which they are used because they have a local scope by default.
 
 ```JSX
 import "./styles/element.css";
