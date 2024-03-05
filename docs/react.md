@@ -68,18 +68,71 @@ const Component = (props) => {
 
 [⬆️ Back to top ⬆️](#react)
 
-## [Components](https://react.dev/reference/react/components)
+## Components
 
-A component is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state.
+A [component](https://react.dev/reference/react/components) is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state.
 
-- [Functional Component](/react/components/fuctional.jsx)
-- [Class Component](/react/components/class.jsx)
+- Use PascalCase
+- Must return a react element
+
+### _[Functional component](/react/components/fuctional.jsx)_
+
+ReactJS Functional components are some of the more common components that will come across while working in React.
+
+```jsx
+function Greeting(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+### _[Class component](/react/components/class.jsx)_
+
+Class components make use of ES6 class and extend the Component class in React.
+
+```jsx
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
 
 React components use **[Props](/https://react.dev/learn/passing-props-to-a-component)** to communicate with each other. They can be assigned any JavaScript value.
 
-- [Destructuring](/react/components/props/destructuring.jsx)
-- [PropTypes](/react/components/props/prop-types.jsx)
-- [DefaultProps](/react/components/props/default-props.jsx)
+### _Destructuring_
+
+```jsx
+function NoDestructuring(props) {
+  let text = `Name:${props.name}, Age:${props.age}`;
+  return <p>{text}</p>;
+}
+
+function WithDestructuring({ name, age }) {
+  let text = `Name:${name}, Age:${age}`;
+  return <p>{text}</p>;
+}
+```
+
+### _[PropTypes](/react/components/props/prop-types.jsx)_
+
+PropTypes serves as a method to ensure that the correct data type is passed for each prop.
+
+```jsx
+Button.propTypes = {
+  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
+};
+```
+
+### _[DefaultProps](/react/components/props/default-props.jsx)_
+
+The defaultProps is a React component property that allows you to set default values for the props argument.
+
+```jsx
+Comment.defaultProps = {
+  name: "Some user",
+};
+```
 
 [⬆️ Back to top ⬆️](#react)
 
@@ -88,19 +141,17 @@ React components use **[Props](/https://react.dev/learn/passing-props-to-a-compo
 The virtual DOM (V DOM) It is a lightweight in-memory representation of the DOM (Document Object Model),
 and it is used to optimize the rendering of components in a React application.
 
-**[List and keys](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)**
+### _List and keys_
 
-When you render lists in React, you can use the key prop to specify a unique key for each item.
-This key is used to identify which item to update when you want to update a specific item.
+When you render lists in React, you can use the key prop to specify a unique key for each item. This key is used to identify which item to update when you want to update a specific item.
 
-```JSx
-<section key={person.id}>...</section>;
+```jsx
+<section key={person.id}>...</section>
 ```
 
-**[Conditional Rendering](https://react.dev/learn/conditional-rendering)**
+### _Conditional Rendering_
 
-Use JavaScript operators like 'if' or the 'conditional operator' to create elements representing the current state,
-and let React update the UI to match them.
+Use JavaScript operators like `if` or the `conditional operator` to create elements representing the current state, and let React update the UI to match them.
 
 - if
 - &&
@@ -181,7 +232,7 @@ We use an npm package which is [gh-pages](https://www.npmjs.com/package/gh-pages
 npm install gh-pages --save-dev
 ```
 
-The script is created in the package.json to deploy.
+The script is created in the **package.json** to deploy.
 
 ```json
 "scripts": {
