@@ -12,6 +12,8 @@ React is an open source JavaScript library for creating user interfaces.
 - [Hooks](#hooks)
 - [Styling](#styling)
 - [Event Handlers](#event-handlers)
+- [Structuring a project with React](#structuring-a-project-with-react)
+- [Deploy in github pages](#deploy-in-github-pages)
 
 ## _Introduction_
 
@@ -213,6 +215,37 @@ const handlerChange = (event) => {}
 <button onclick={handlerClick}>Text</button>
 <input type="text" onChange={handlerChange} />
 ```
+
+[⬆️ Back to top ⬆️](#react)
+
+## Structuring a project with React
+
+### _Organize components_
+
+- **Components**: They are sets of styled elements that fulfill a single objective.
+- **Containers**: Containers are groupings of components. They are usually sections.
+- **Pages**: They are formed by containers and components. Normally they are the components that slow the routes of oru application.
+
+For each page, container and component, I create a folder and separate the element styles from the layout and functionality.
+Components are usually grouped according to their type so there is no confusion.
+In the container folder, folders are created with the names of the pages with the
+containers that form them.
+
+### _Organize global constants_
+
+Having separated in a folder those constants that are used globally in the application avoids headaches in case of having to change any of them.
+
+### _Organized requests_
+
+To organize the request to an api, a folder called services is created to separate each call to an endpoint into a file and group them into entries.
+
+### _Organizing the global state_
+
+If the web needs global state, a folder called context or redux is created. Then create a folder with the name of each value that will have our global state.
+
+### _Naming files and folders_
+
+Both PascasCase and kebab-case can be used to name files and folders, ideally you should use one of these naming methods for the project and not use both in the same project.
 
 [⬆️ Back to top ⬆️](#react)
 
