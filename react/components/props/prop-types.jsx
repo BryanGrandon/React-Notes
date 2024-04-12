@@ -1,20 +1,24 @@
-// https://www.npmjs.com/package/prop-types
+{
+  /** PropTypes are simply a mechanism that ensures that the passed value is of the correct datatype.
+   * 
+   * Installation: npm install --save prop-types .
+   *
+   * Importing:
+       ES6: import PropTypes from "prop-types";
+       ES5: var PropTypes = require("prop-types");
+   */
+}
 
-import PropTypes from "prop-types"; // ES6
+import PropTypes from "prop-types";
 
-function Button({ text }) {
+export default function Button({ text }) {
   return <button>{text}</button>;
 }
 
+{
+  /* Define the PropTypes for the 'Button' component */
+}
 Button.propTypes = {
   text: PropTypes.string,
-  // text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
-
-root.render(
-  <>
-    <Button text="Click me" />
-    <Button text="Pay" />
-    <Button text={{ text: "hello" }} /> {/* Error */}
-  </>
-);
