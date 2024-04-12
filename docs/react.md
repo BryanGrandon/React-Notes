@@ -10,6 +10,7 @@ React is an open source JavaScript library for creating user interfaces.
 - [Components](#components)
 - [Rendering](#rendering)
 - [Hooks](#hooks)
+- [Routers](#routers)
 - [Styling](#styling)
 - [Event Handlers](#event-handlers)
 - [Structuring a project with React](#structuring-a-project-with-react)
@@ -178,6 +179,12 @@ const [state, setState] = useState(initialState);
 import { useEffect } from "react";
 useEffect(setup, dependencies?)
 ```
+
+[⬆️ Back to top ⬆️](#react)
+
+## Routers
+
+Routing is an essential concept in Single Page Applications (SPA).
 
 [⬆️ Back to top ⬆️](#react)
 
