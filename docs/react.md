@@ -73,69 +73,23 @@ const Component = (props) => {
 
 ## Components
 
-A [component](https://react.dev/reference/react/components) is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state.
+A component is a piece of code that renders a part of the interface. Components can be parameterized, reused and can contain their own state.
 
 - Use PascalCase
 - Must return a react element
 
-### _[Functional component](/react/components/fuctional.jsx)_
+### _Ways to create a component_
 
-ReactJS Functional components are some of the more common components that will come across while working in React.
+- [Functional component](/react/components/fuctional.jsx)
+- [Class component](/react/components/class.jsx)
 
-```jsx
-function Greeting(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-```
+### _Props_
 
-### _[Class component](/react/components/class.jsx)_
+React components use Props to communicate with each other. They can be assigned any JavaScript value.
 
-Class components make use of ES6 class and extend the Component class in React.
-
-```jsx
-class Greeting extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}</h1>;
-  }
-}
-```
-
-React components use **[Props](/https://react.dev/learn/passing-props-to-a-component)** to communicate with each other. They can be assigned any JavaScript value.
-
-### _Destructuring_
-
-```jsx
-function NoDestructuring(props) {
-  let text = `Name:${props.name}, Age:${props.age}`;
-  return <p>{text}</p>;
-}
-
-function WithDestructuring({ name, age }) {
-  let text = `Name:${name}, Age:${age}`;
-  return <p>{text}</p>;
-}
-```
-
-### _[PropTypes](/react/components/props/prop-types.jsx)_
-
-PropTypes serves as a method to ensure that the correct data type is passed for each prop.
-
-```jsx
-Button.propTypes = {
-  text: PropTypes.string,
-  text: PropTypes.string.isRequired,
-};
-```
-
-### _[DefaultProps](/react/components/props/default-props.jsx)_
-
-The defaultProps is a React component property that allows you to set default values for the props argument.
-
-```jsx
-Comment.defaultProps = {
-  name: "Some user",
-};
-```
+- [Destructuring](/react/components/props/destructuring.jsx)
+- [PropTypes](/react/components/props/prop-types.jsx)
+- [DefaultProps](/react/components/props/default-props.jsx)
 
 [⬆️ Back to top ⬆️](#react)
 
@@ -162,29 +116,28 @@ Use JavaScript operators like `if` or the `conditional operator` to create eleme
 
 [⬆️ Back to top ⬆️](#react)
 
-## [Hooks](/react/hooks.jsx)
+## Hooks
 
 Hooks are a React API that allows us to have state, and other React features, in components created with a function
 
-**[useState](https://react.dev/reference/react/useState)** hook is used to manage the state of a component in functional components. Calling useState returns an array with tho elements: the current state value and a function to update the state.
+### _Basic Hooks_
 
-```JSX
-import { useState } from "react";
-const [state, setState] = useState(initialState);
-```
-
-**[useEffect](https://react.dev/reference/react/useEffect)** is a special hook that allows you to execute side effects in React. UseEffect is executed after the first render and after each update.
-
-```JSX
-import { useEffect } from "react";
-useEffect(setup, dependencies?)
-```
+- [useState](/react/hooks/basic-hooks/useState.jsx)
+- [useEffect](/react/hooks/basic-hooks/useEffect.jsx)
 
 [⬆️ Back to top ⬆️](#react)
 
 ## Routers
 
 Routing is an essential concept in Single Page Applications (SPA).
+
+### _React router_
+
+React Router is a JavaScript framework that lets us handle client and server-side routing in React applications.
+
+```bash
+npm install react-router-dom
+```
 
 [⬆️ Back to top ⬆️](#react)
 
@@ -252,7 +205,7 @@ If the web needs global state, a folder called context or redux is created. Then
 
 ### _Naming files and folders_
 
-Both PascasCase and kebab-case can be used to name files and folders, ideally you should use one of these naming methods for the project and not use both in the same project.
+Both PascalCase and kebab-case can be used to name files and folders, ideally you should use one of these naming methods for the project and not use both in the same project.
 
 [⬆️ Back to top ⬆️](#react)
 
