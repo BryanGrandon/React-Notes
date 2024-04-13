@@ -16,11 +16,11 @@ React is an open source JavaScript library for creating user interfaces.
 - [Structuring a project with React](#structuring-a-project-with-react)
 - [Deploy in github pages](#deploy-in-github-pages)
 
-## _Introduction_
+## Introduction
 
 This project is to have a record of what i have learned about React.
 
-## _Web application packager_
+## Web application packager
 
 CLI tools for React development
 
@@ -131,7 +131,7 @@ Hooks are a React API that allows us to have state, and other React features, in
 
 Routing is an essential concept in Single Page Applications (SPA).
 
-### _React router_
+### _[React router](/react/routers/react-router.jsx)_
 
 React Router is a JavaScript framework that lets us handle client and server-side routing in React applications.
 
