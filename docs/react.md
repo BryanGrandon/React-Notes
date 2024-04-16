@@ -141,6 +141,16 @@ npm install react-router-dom
 
 [⬆️ Back to top ⬆️](#react)
 
+## State Management
+
+State management is a way to organize state and how data flows between your components.
+
+### _[Context](/react/state-management/context.jsx)_
+
+This context object can be used to pass data through the component tree without having to pass props down manually at every level. It allows components to subscribe to changes in the context value.
+
+[⬆️ Back to top ⬆️](#react)
+
 ## [Styling](/https://react.dev/learn/tutorial-tic-tac-toe#stylescss)
 
 Choosing the right method for styling components isn’t an absolute truth. It’s a relative choice that should serve your use case, it depends on your personal preferences and the specific complexity of your application.
