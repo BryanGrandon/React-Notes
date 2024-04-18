@@ -1,0 +1,10 @@
+.card {
+    background: #202020;
+    color: #fff;
+    padding: 1rem;
+}
+
+.title {
+    color: #1f1234;
+    text-align: center;
+}
