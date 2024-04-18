@@ -151,26 +151,17 @@ This context object can be used to pass data through the component tree without 
 
 [⬆️ Back to top ⬆️](#react)
 
-## [Styling](/https://react.dev/learn/tutorial-tic-tac-toe#stylescss)
+## Styling
 
-Choosing the right method for styling components isn’t an absolute truth. It’s a relative choice that should serve your use case, it depends on your personal preferences and the specific complexity of your application.
+In modern React, there are many ways to style a React application with CSS.
 
-React lets you add **[CSS inline](/react/styling/inline-css.jsx)**, written as attributes and passed to elements.
+### _[CSS inline](/react/styles/inline-css.jsx)_
 
-```JSX
-<p style={{color:"#1f1235"}}>Text</p>
+React lets you add CSS inline, written as attributes and passed to elements.
 
-const styleText = { color: "red" }
-<p style={styleText}>Text</p>
-```
+### _[CSS modules](/react/styles/module/)_
 
-React allows you to add **[CSS modules](/react/styling/module-css.jsx)** to be available within the component in which they are used because they have a local scope by default.
-
-```JSX
-import "./styles/element.css";
-
-<p className="text">Text</p>
-```
+React allows you to add CSS modules to be available within the component in which they are used because they have a local scope by default.
 
 [⬆️ Back to top ⬆️](#react)
 
