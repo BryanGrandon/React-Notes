@@ -1,9 +1,15 @@
-{
-  /*
-    useEffect is a special hook that allows you to execute side effects in React.
-    UseEffect is executed after the first render and after each update. 
-  */
-}
+import { useState, useEffect } from "react";
+import { createConnection } from "./chat.js";
 
-import { useEffect } from "react";
-useEffect(setup, dependencies);
+function ChatRoom({ roomId }) {
+  const [serverUrl, setServerUrl] = useState("https://localhost:1234");
+
+  useEffect(() => {
+    const connection = createConnection(serverUrl, roomId);
+    connection.connect();
+    return () => {
+      connection.disconnect();
+    };
+  }, [serverUrl, roomId]);
+  // ...
+}
