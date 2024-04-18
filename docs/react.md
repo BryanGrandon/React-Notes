@@ -80,16 +80,38 @@ A component is a piece of code that renders a part of the interface. Components 
 
 ### _Ways to create a component_
 
-- [Functional component](/react/components/fuctional.jsx)
-- [Class component](/react/components/class.jsx)
+- Functional Component
+
+  ```jsx
+  function Greeting(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+  ```
+
+- Class Component
+  ```jsx
+  class Greetings extends React.Component {
+    // Must have a render() method to return a JSX element.
+    render() {
+      return <h1>Hello, {this.props.name}!</h1>;
+    }
+  }
+  ```
 
 ### _Props_
 
-React components use Props to communicate with each other. They can be assigned any JavaScript value.
+React component functions accept a single argument, a `props` object. React components use it to communicate with each other.
 
 - [Destructuring](/react/components/props/destructuring.jsx)
-- [PropTypes](/react/components/props/prop-types.jsx)
-- [DefaultProps](/react/components/props/default-props.jsx)
+  - In general, you do not need access to the entire props object, so you can deconstruct it into individual props.
+- [Assigning a default value for a prop](/react/components/props/assingning-a-default-value.jsx).
+  - Using Destructuring
+  - DefaultProps
+- [PropTypes](/react/components/library/prop-types.jsx)
+  - PropTypes are simply a mechanism that ensures that the passed value is of the correct datatype.
+  ```bash
+   npm install --save prop-types
+  ```
 
 [⬆️ Back to top ⬆️](#react)
 
@@ -100,19 +122,30 @@ and it is used to optimize the rendering of components in a React application.
 
 ### _List and keys_
 
-When you render lists in React, you can use the key prop to specify a unique key for each item. This key is used to identify which item to update when you want to update a specific item.
+Keys are used by React to identify more efficiently the elements that have been changed, added or deleted within the application, keys are used only when we want to show the data of an array, such as a list.
 
 ```jsx
-<section key={person.id}>...</section>
+<section>
+  {array.map((data) => (
+    <Component key={data.id} />
+  ))}
+</section>
 ```
 
 ### _Conditional Rendering_
 
-Use JavaScript operators like `if` or the `conditional operator` to create elements representing the current state, and let React update the UI to match them.
+Conditional rendering in React works the same way conditions work in JavaScript
 
-- if
-- &&
-- Ternary operator
+```jsx
+function Component({ age, name }) {
+  // IF
+  if (age < 18) {
+    return <section>You are a minor.</section>;
+  }
+  // Ternary operator
+  return <section>{name ? name : "User"} of legal age.</section>;
+}
+```
 
 [⬆️ Back to top ⬆️](#react)
 
@@ -123,7 +156,15 @@ Hooks are a React API that allows us to have state, and other React features, in
 ### _Basic Hooks_
 
 - [useState](/react/hooks/basic-hooks/useState.jsx)
+  - useState is a React Hook that allows you to add a state variable to your component.
+  ```jsx
+  const [state, setState] = useState(initialState);
+  ```
 - [useEffect](/react/hooks/basic-hooks/useEffect.jsx)
+  - useEffect is a React Hook that allows you to synchronize a component with an external system
+  ```jsx
+  useEffect(setup, dependencies?)
+  ```
 
 [⬆️ Back to top ⬆️](#react)
 
