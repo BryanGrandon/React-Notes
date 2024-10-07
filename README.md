@@ -90,12 +90,12 @@ A component is a piece of code that renders a part of the interface. Components 
 
 React component functions accept a single argument, a `props` object. React components use it to communicate with each other.
 
-- [Destructuring.](/react/components/props/destructuring.jsx)
+- [Destructuring.](/react/components/destructuring.jsx)
   - In general, you do not need access to the entire props object, so you can deconstruct it into individual props.
-- [Assigning a default value for a prop.](/react/components/props/assingning-a-default-value.jsx)
+- [Assigning a default value for a prop.](/react/components/assingning-a-default-value.jsx)
   - Using Destructuring
   - DefaultProps
-- [PropTypes.](/react/components/library/prop-types.jsx)
+- [PropTypes.](/react/components/prop-types.jsx)
   - PropTypes are simply a mechanism that ensures that the passed value is of the correct datatype.
     ```bash
     npm install --save prop-types
