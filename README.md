@@ -197,13 +197,8 @@ This context object can be used to pass data through the component tree without 
 
 In modern React, there are many ways to style a React application with CSS.
 
-- [CSS inline.](/react/styles/inline-css.jsx)
-
-  React lets you add CSS inline, written as attributes and passed to elements.
-
-- [CSS modules.](/react/styles/module/)
-
-  React allows you to add CSS modules to be available within the component in which they are used because they have a local scope by default.
+- React lets you add [CSS inline](/react/styles/inline-css.jsx), written as attributes and passed to elements.
+- React allows you to add [CSS modules.](/react/styles/module/) to be available within the component in which they are used because they have a local scope by default.
 
 ## Event Handlers
 
